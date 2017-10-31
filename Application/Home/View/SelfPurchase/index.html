@@ -1,0 +1,30 @@
+<layout name="layout" />
+<script src="{$uri}Public/Scripts/PSI/SelfPurchase/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/SelfPurchase/SelfPurchaseEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/gridToExcel.js?dt={$dtFlag}" type="text/javascript"></script>
+
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.SelfPurchase.MainForm", {
+            pAddSelfPurchaseBill: "{$pAddSelfPurchaseBill}",
+            pEditSelfPurchaseBill: "{$pEditSelfPurchaseBill}",
+            pDeleteSelfPurchaseBill: "{$pDeleteSelfPurchaseBill}",
+            pImportSelfPurchaseBill: "{$pImportSelfPurchaseBill}",
+            pExportSelfPurchaseBill: "{$pExportSelfPurchaseBill}",
+            pVerifySelfPurchaseBill: "{$pVerifySelfPurchaseBill}",
+            pRevertVerifySelfPurchaseBill: "{$pRevertVerifySelfPurchaseBill}"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1001"
+        });
+    });
+</script>

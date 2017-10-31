@@ -1,0 +1,26 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/Supplier/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierImportForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.Supplier.MainForm", {
+            pAddSupplier: "{$pAddSupplier}",
+            pEditSupplier: "{$pEditSupplier}",
+            pDeleteSupplier: "{$pDeleteSupplier}",
+            pImportSupplier: "{$pImportSupplier}",
+            pExportSupplier: "{$pExportSupplier}"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1004"
+            });
+    });
+</script>

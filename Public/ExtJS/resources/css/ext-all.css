@@ -1,0 +1,4 @@
+@import '../ext-theme-classic/ext-theme-classic-all.css';
+.x-grid-back-red {
+    background: #FF0000;
+}

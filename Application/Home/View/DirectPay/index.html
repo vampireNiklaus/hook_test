@@ -1,0 +1,36 @@
+<layout name="layout" />
+<script src="{$uri}Public/Scripts/PSI/DirectPay/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DirectPay/DirectPayEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Employee/EmployeeField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DirectPay/DirectPayEditPanel.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DirectPay/DirectPayExportForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/BankDeposit/BankAccountField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/MonthField.js?dt={$dtFlag}" type="text/javascript"></script>
+<!--<script src="{$uri}Public/ExtJS/plus/RowExpander.js?dt={$dtFlag}" type="text/javascript"></script>-->
+<script src="{$uri}Public/Scripts/PSI/gridToExcel.js?dt={$dtFlag}" type="text/javascript"></script>
+
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.DirectPay.MainForm", {
+            pAddDirectPay: "{$pAddDirectPay}",
+            pEditDirectPay: "{$pEditDirectPay}",
+            pDeleteDirectPay: "{$pDeleteDirectPay}",
+            pImportDirectPay: "{$pImportDirectPay}",
+            pExportDirectPay: "{$pExportDirectPay}",
+            pVerifyDirectPay: "{$pVerifyDirectPay}",
+            pRevertVerifyDirectPay: "{$pRevertVerifyDirectPay}",
+            pViewDirectPayDetail: "{$pViewDirectPayDetail}",
+            pDirectPaySearch: "{$pDirectPaySearch}"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1001"
+        });
+    });
+</script>

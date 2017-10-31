@@ -1,0 +1,24 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/DeliverAccount/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DeliverAccount/DeliverAccountEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Deliver/DeliverField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.DeliverAccount.MainForm", {
+            pAddDeliverAccount: "{$pAddDeliverAccount}",
+            pEditDeliverAccount: "{$pEditDeliverAccount}",
+            pDeleteDeliverAccount: "{$pDeleteDeliverAccount}",
+            pDisableDeliverAccount: "{$pDisableDeliverAccount}"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1004"
+            });
+    });
+</script>

@@ -1,0 +1,34 @@
+<layout name="layout" />
+<script src="{$uri}Public/Scripts/PSI/StockManage/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/StockManage/StockItemAlarmEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/StockManage/StockBatchItemEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/StockManage/StockTransEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/StockManage/BrokenBillEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/StockManage/StockField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Deliver/DeliverField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.StockManage.MainForm", {
+            pAddStockTrans: "{$pAddStockTrans}",
+            pEditStockTrans: "{$pEditStockTrans}",
+            pDeleteStockTrans: "{$pDeleteStockTrans}",
+            pVerifyStockTrans: "{$pVerifyStockTrans}",
+            pRevertVerifyStockTrans: "{$pRevertVerifyStockTrans}",
+            pEditStockAlarm: "{$pEditStockAlarm}",
+            pEditStockBatch: "{$pEditStockBatch}",
+            pViewStockMetaInfo: "{$pViewStockMetaInfo}",
+            pDrugBrokenBill: "{$pDrugBrokenBill}",
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1001"
+        });
+    });
+</script>

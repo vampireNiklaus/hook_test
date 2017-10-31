@@ -1,0 +1,40 @@
+<layout name="layout" />
+<script src="{$uri}Public/Scripts/PSI/DailySell/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DailySell/DailySellAddForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Employee/EmployeeField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DailySell/DailySellsImportForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DailySell/DailySellExcelImportPanel.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DailySell/DailySellItemsPanel.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/UX/CellEditing.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Hospital/HospitalField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Util/DateUtil.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Deliver/DeliverField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DailySell/DailySellEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DailySell/DailySellProfitEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/DailySell/DailySellExportForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/gridToExcel.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.DailySell.MainForm", {
+            pAddDailySellItem: "{$pAddDailySellItem}",
+            pDeleteDailySellItem: "{$pDeleteDailySellItem}",
+            pImportDailySellItem: "{$pImportDailySellItem}",
+            pExportDailySellItem: "{$pExportDailySellItem}",
+            pConfirmMatchedDailySellItem: "{$pConfirmMatchedDailySellItem}",
+            pConfirmUnMatchedDailySellItem: "{$pConfirmUnMatchedDailySellItem}",
+            pViewImmediatelySellGrid : "{$pViewImmediatelySellGrid}"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1001"
+        });
+    });
+</script>

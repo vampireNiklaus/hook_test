@@ -1,0 +1,34 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/YeWuYuan/DailySellItemsForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/gridToExcel.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<!--<script src="{$uri}Public/Scripts/PSI/Aggrid/ag-grid.js?dt={$dtFlag}" type="text/javascript"></script>-->
+
+
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css"/>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+<!--<script src="https://unpkg.com/ag-grid-enterprise@13.2.0/dist/ag-grid-enterprise.js"></script>-->
+
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.YeWuYuan.DailySellItemsForm"));
+
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid2018"
+            });
+
+
+    });
+</script>

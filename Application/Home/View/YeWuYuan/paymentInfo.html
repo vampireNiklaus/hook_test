@@ -1,0 +1,31 @@
+<layout name="layout" />
+
+<style>
+    .x-monthpicker-months{
+        display: none;
+    }
+    .x-monthpicker{
+        width: 90px;
+    }
+</style>
+
+<script src="{$uri}Public/Scripts/PSI/YeWuYuan/PaymentInfoDetailForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/YeWuYuan/PaymentInfoForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="<?php echo ($uri); ?>Public/Scripts/PSI/MonthField.js?dt=<?php echo ($dtFlag); ?>" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/gridToExcel.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.YeWuYuan.PaymentInfoForm"));
+
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid2016"
+            });
+    });
+</script>

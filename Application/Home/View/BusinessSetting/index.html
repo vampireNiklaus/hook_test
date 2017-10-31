@@ -1,0 +1,46 @@
+<layout name="layout" />
+<style>
+    /*.x-monthpicker-months{*/
+        /*display: none;*/
+    /*}*/
+    /*.x-monthpicker{*/
+        /*width: 90px;*/
+    /*}*/
+</style>
+<script src="{$uri}Public/Scripts/PSI/BusinessSetting/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/BusinessSetting/EmployeeMonthSellAlarmEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/BusinessSetting/StockTransEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/BusinessSetting/StockField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/BusinessSetting/ProductAgencyEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/BusinessSetting/PromoteAgencyEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Employee/EmployeeField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Deliver/DeliverField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Hospital/HospitalRegionField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}public/Scripts/PSI/MonthField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.BusinessSetting.MainForm", {
+            pProductAgency: "{$pProductAgency}",
+            pProductAgencyAdd: "{$pProductAgencyAdd}",
+            pProductAgencyEdit: "{$pProductAgencyEdit}",
+            pProductAgencyDelete: "{$pProductAgencyDelete}",
+            pPromoteAgency: "{$pPromoteAgency}",
+            pPromoteAgencyAdd: "{$pPromoteAgencyAdd}",
+            pPromoteAgencyEdit: "{$pPromoteAgencyEdit}",
+            pPromoteAgencyDelete: "{$pPromoteAgencyDelete}",
+            pEditEmployeeMonthSellAlarm: "{$pEditEmployeeMonthSellAlarm}",
+            pEmployeeMonthSellAlarm: "{$pEmployeeMonthSellAlarm}"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1001"
+        });
+    });
+</script>

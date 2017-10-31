@@ -1,0 +1,1 @@
+crontab -e 45 12 * * *  /usr/bin/curl -o temp.txt http://112.124.32.175/Home/Crons/update_drug_daily_stock

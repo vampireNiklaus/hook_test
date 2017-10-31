@@ -1,0 +1,32 @@
+<layout name="layout" />
+
+
+<script src="{$uri}Public/Scripts/PSI/SelfStockKaiPiaoOut/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/SelfStockKaiPiaoOut/SelfStockKaiPiaoOutEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Deliver/DeliverField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/gridToExcel.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.SelfStockKaiPiaoOut.MainForm",{
+            pAddSelfWarehouseOutKaiPiaoBill: "{$pAddSelfWarehouseOutKaiPiaoBill}",
+            pViewSelfWarehouseOutKaiPiaoBill: "{$pViewSelfWarehouseOutKaiPiaoBill}",
+            pEditSelfWarehouseOutKaiPiaoBill: "{$pEditSelfWarehouseOutKaiPiaoBill}",
+            pDeleteSelfWarehouseOutKaiPiaoBill: "{$pDeleteSelfWarehouseOutKaiPiaoBill}",
+            pImportSelfWarehouseOutKaiPiaoBill: "{$pImportSelfWarehouseOutKaiPiaoBill}",
+            pExportSelfWarehouseOutKaiPiaoBill: "{$pExportSelfWarehouseOutKaiPiaoBill}",
+            pVerifySelfWarehouseOutKaiPiaoBill: "{$pVerifySelfWarehouseOutKaiPiaoBill}",
+            pRevertVerifySelfWarehouseOutKaiPiaoBill: "{$pRevertVerifySelfWarehouseOutKaiPiaoBill}"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid2021"
+            });
+    });
+</script>

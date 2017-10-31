@@ -1,0 +1,26 @@
+<layout name="layout" />
+
+<script src="{$uri}Public/Scripts/PSI/BankCard/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/BankCard/BankCardEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.BankCard.MainForm", {
+        	pAddCategory: "{$pAddCategory}",
+        	pEditCategory: "{$pEditCategory}",
+        	pDeleteCategory: "{$pDeleteCategory}",
+        	pAddBankCard: "{$pAddBankCard}",
+        	pEditBankCard: "{$pEditBankCard}",
+        	pDeleteBankCard: "{$pDeleteBankCard}"
+        }));
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1004"
+            });
+    });
+</script>

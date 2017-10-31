@@ -1,0 +1,47 @@
+<layout name="layout" />
+<script src="{$uri}Public/Scripts/PSI/Drug/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugCategoryEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugAssignEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Supplier/SupplierField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Employee/EmployeeField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Deliver/DeliverField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/Drug_AddHospitalFilterForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/Drug_SupplierListPanel.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/Drug_DeliverListPanel.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/Drug_DelegateListPanel.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugAssignImportForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Drug/DrugImportForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/UX/CellEditing.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/Hospital/HospitalMultiSelectPanel.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.Drug.MainForm", {
+            pAddDrugCategory : "{$pAddDrugCategory}",
+            pEditDrugCategory : "{$pEditDrugCategory}",
+            pDeleteDrugCategory : "{$pDeleteDrugCategory}",
+            pImportDrugCategory : "{$pImportDrugCategory}",
+            pAddDrugAssign : "{$pAddDrugAssign}",
+            pDeleteDrugAssign : "{$pDeleteDrugAssign}",
+            pImportDrugAssign : "{$pImportDrugAssign}",
+            pAddDrugProfitAssign : "{$pAddDrugProfitAssign}",
+            pDeleteDrugProfitAssign : "{$pDeleteDrugProfitAssign}",
+            pEditDrugProfitAssign : "{$pEditDrugProfitAssign}",
+            pViewDrugSecretInfo : "{$pViewDrugSecretInfo}",
+            pViewCompanyProfitAssign : "{$pViewCompanyProfitAssign}",
+            pEditCompanyProfitAssign : "{$pAddDrugProfitAssign}",
+            pViewEmployeeProfitAssign : "{$pViewEmployeeProfitAssign}",
+            pEditEmployeeProfitAssign : "{$pEditDrugProfitAssign}"
+        }));
+
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid1001"
+        });
+    });
+</script>

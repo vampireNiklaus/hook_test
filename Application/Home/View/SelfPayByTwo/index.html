@@ -1,0 +1,28 @@
+<layout name="layout" />
+<script src="{$uri}Public/Scripts/PSI/SelfPayByTwo/MainForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/SelfPayByTwo/SelfPayByTwoEditForm.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/BankDeposit/BankAccountField.js?dt={$dtFlag}" type="text/javascript"></script>
+<script src="{$uri}Public/Scripts/PSI/gridToExcel.js?dt={$dtFlag}" type="text/javascript"></script>
+
+<script>
+    Ext.onReady(function(){
+        var app = Ext.create("PSI.App", {
+            userName: "{$loginUserName}",
+            productionName: "{$productionName}"
+        });
+
+        app.add(Ext.create("PSI.SelfPayByTwo.MainForm",{
+            pEditSelfPayByTwoBill: "{$pEditSelfPayByTwoBill}",
+            pDeleteSelfPayByTwoBill: "{$pDeleteSelfPayByTwoBill}",
+            pImportSelfPayByTwoBill: "{$pImportSelfPayByTwoBill}",
+            pExportSelfPayByTwoBill: "{$pExportSelfPayByTwoBill}",
+            pVerifySelfPayByTwoBill: "{$pVerifySelfPayByTwoBill}",
+            pRevertVerifySelfPayByTwoBill: "{$pRevertVerifySelfPayByTwoBill}"
+        }));
+
+        app.setAppHeader({
+            title: "{$title}",
+            iconCls: "PSI-fid2025"
+        });
+    });
+</script>
